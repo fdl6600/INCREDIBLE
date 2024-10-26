@@ -12,7 +12,7 @@
 .calculator {
    
     box-shadow: 4px 4px 30px rgba(0,0,0,0.2);
-    border-radius: 12px;
+    border-radius: 15px;
     background: #222522;
     overflow: hidden;
 }
@@ -20,7 +20,7 @@ form input {
     width: 100%;
     height: 150px;
     border: none;
-    border-radius: 12px;
+    border-radius: 15px;
     font-size: 2rem;
     padding: 1rem;
     color: #fff;
@@ -42,7 +42,7 @@ button {
     height: 52px;
     font-size: 22px;
     font-weight: 600;
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
 }
 .btn-yellow {
