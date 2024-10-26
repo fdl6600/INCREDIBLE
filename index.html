@@ -1,176 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="https://muhilanproj.online/webspace4u/logo.png">
-    <title>@codewith_muhilan</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+    <title>incredible</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+        html {
+      background: #000;
+    }
+    p {
+      text-align: center;
+      margin-top: 150px;
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    button {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border: 0;
+      font-size: 14px;
+      padding: 25px 45px;
+      display: inline-block;
+      color: #fff;
+      text-transform: uppercase;
+      border-radius: 500px;
+      font-weight: bold;
+      font-family: Arial;
+      background: linear-gradient(90deg, #ff6f61, #ff8777, #ff98a0, #ffabda, #d7a2f5, #d7a2f5, #7ca5de, #3e73bd);
+      background-size: 1800% 100%;
+      -webkit-animation: rainbow 5s linear infinite;
+      animation: rainbow 5s linear infinite;
+    }
 
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: #000000;
-            font-family: 'Raleway', sans-serif;
-            font-weight: bold;
-        }
+    @-webkit-keyframes rainbow {
+      0% {
+        background-position: 200% 0;
+      }
+      100% {
+        background-position: -200% 0;
+      }
+    }
 
-        a {
-            position: relative;
-            display: inline-block;
-            padding: 25px 30px;
-            margin: 40px 0;
-            color: #03e9f4;
-            text-decoration: none;
-            text-transform: uppercase;
-            transition: 0.5s;
-            letter-spacing: 4px;
-            overflow: hidden;
-            margin-right: 50px;
-        }
+    @keyframes rainbow {
+      0% {
+        background-position: 200% 0;
+      }
+      100% {
+        background-position: -200% 0;
+      }
+    }
 
-        a:hover {
-            background: #03e9f4;
-            color: #050801;
-            box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 200px #03e9f4;
-            -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
-        }
+    
+    /* -- YouTube Link Styles -- */
 
-        a:nth-child(1) {
-            filter: hue-rotate(270deg);
-        }
+    #source-link {
+      top: 60px;
+    }
 
-        a:nth-child(2) {
-            filter: hue-rotate(110deg);
-        }
+    #source-link>i {
+      color: rgb(94, 106, 210);
+    }
 
-        a span {
-            position: absolute;
-            display: block;
-        }
+    #yt-link {
+      top: 10px;
+    }
 
-        a span:nth-child(1) {
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #03e9f4);
-            animation: animate1 1s linear infinite;
-        }
+    #yt-link>i {
+      color: rgb(219, 31, 106);
 
-        @keyframes animate1 {
-            0% {
-                left: -100%;
-            }
+    }
 
-            50%,
-            100% {
-                left: 100%;
-            }
-        }
+    .meta-link {
+      align-items: center;
+      backdrop-filter: blur(3px);
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      display: inline-flex;
+      gap: 5px;
+      left: 10px;
+      padding: 10px 20px;
+      position: fixed;
+      text-decoration: none;
+      transition: background-color 600ms, border-color 600ms;
+      z-index: 10000;
+    }
 
-        a span:nth-child(2) {
-            top: -100%;
-            right: 0;
-            width: 2px;
-            height: 100%;
-            background: linear-gradient(180deg,
-                    transparent, #03e9f4);
-            animation: animate2 1s linear infinite;
-            animation-delay: 0.25s;
-        }
+    .meta-link:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
 
-        @keyframes animate2 {
-            0% {
-                top: -100%;
-            }
+    .meta-link>i,
+    .meta-link>span {
+      height: 20px;
+      line-height: 20px;
+    }
 
-            50%,
-            100% {
-                top: 100%;
-            }
-        }
-
-        a span:nth-child(3) {
-            bottom: 0;
-            right: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(270deg, transparent, #03e9f4);
-            animation: animate3 1s linear infinite;
-            animation-delay: 0.50s;
-        }
-
-        @keyframes animate3 {
-            0% {
-                right: -100%;
-            }
-
-            50%,
-            100% {
-                right: 100%;
-            }
-        }
+    .meta-link>span {
+      color: white;
+      font-family: "Rubik", sans-serif;
+      transition: color 600ms;
+    }
 
 
-        a span:nth-child(4) {
-            bottom: -100%;
-            left: 0;
-            width: 2px;
-            height: 100%;
-            background: linear-gradient(360deg, transparent, #03e9f4);
-            animation: animate4 1s linear infinite;
-            animation-delay: 0.75s;
-        }
+        @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400");
 
-        @keyframes animate4 {
-            0% {
-                bottom: -100%;
-            }
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-            50%,
-            100% {
-                bottom: 100%;
-            }
-        }
+/* ================= VARIABLE ================ */
+:root {
+  --primary-color: hsl(9, 94%, 61%);
+  --primary-color-alt: hsl(28, 72%, 83%);
+  --second-color: #3e537c;
+  --second-color-alt: hsla(220, 33%, 36%, 65%);
+  --third-color: hsl(220, 36%, 28%);
+  --white-color: #fbfbfb;
+  --white-color-alt: hsl(12, 14%, 93%);
+  --dark-color: hsl(300, 100%, 0%);
+}
+
+/* ================= BASE ==================== */
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+.bx {
+  font-size: 2.5rem;
+}
+.container {
+  padding: 0 2rem;
+}
+
+/* -- BODY -- */
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  background-color: var(--white-color);
+  scroll-behavior: smooth;
+}
+
+/* ================= HEADER ================ */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--dark-color);
+  padding: 1rem 2rem;
+}
+.company-logo {
+  font-size: 2.8rem;
+  font-weight: 1000;
+  background: -webkit-linear-gradient(
+    120deg,
+    var(--primary-color-alt),
+    var(--primary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav-items {
+  display: flex;
+}
+.nav-item {
+  margin: 0 2rem;
+}
+.nav-link {
+  font-size: 1.1rem;
+  letter-spacing: 0.05rem;
+  position: relative;
+  background: -webkit-linear-gradient(
+    var(--primary-color-alt),
+    var(--primary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav-link::before {
+  content: "";
+  background: linear-gradient(var(--primary-color), var(--primary-color-alt));
+  width: 100%;
+  height: 0.05rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 150ms;
+}
+.nav-link:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.menu-toggle {
+  display: none;
+}
+.bx-menu,
+.bx-x {
+  cursor: pointer;
+  background: -webkit-linear-gradient(
+    120deg,
+    var(--primary-color-alt),
+    var(--primary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: none !important;
+}
 
 
 
-       
+/* -------- HOME SECTION -------------- */
+.section-1 {
+  background-color: var(--dark-color);
+  display: grid;
+}
+/* .home-computer-container {} */
+
+.slogan .company-title {
+  background: -webkit-linear-gradient(
+    120deg,
+    var(--primary-color-alt),
+    var(--primary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.slogan .company-slogan {
+  background: -webkit-linear-gradient(
+    120deg,
+    var(--primary-color-alt),
+    var(--primary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 1000px;
+  line-height: 1.8rem;
+}
     </style>
 </head>
+<body>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
 <body>
+  <header>
+    <div class="company-logo">INCREDIBLE</div>
+    <nav class="navbar">
+      <ul class="nav-items">
+        <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
+        <li class="nav-item"><a href="hehe.html" class="nav-link">OFFER</a></li>
+        <li class="nav-item"><a href="hehe.html" class="nav-link">SHOP</a></li>
+        <li class="nav-item"><a href="hehe.html" class="nav-link">CONTACT</a></li>
+      </ul>
+    </nav>
+    <div class="menu-toggle">
+      <i class="bx bx-menu"></i>
+      <i class="bx bx-x"></i>
+    </div>
+  </header>
+  <main>
+    <!-- HOME SECTION -->
+    <section class="container section-1">
+      <div class="slogan">
+        <h1 class="company-title">WELCOME DUDE!</h1>
+        <h2 class="company-slogan">
+          The biggest useless project everyone has ever seen.
+        </h2>
+      </div>
 
-    <a href="text.html">
-        <span></span><span></span>
-        <span></span><span></span>
-        Text to Speak
-    </a>
-    <a href="calculator.html">
-        <span></span><span></span>
-        <span></span><span></span>
-        Character Calculater
-    </a>
-    
+      <p><a href="login.html">
+         <button>Get in</button></a></p>
+  
+ 
+    </section>
 
 
-   
 </body>
-
 </html>

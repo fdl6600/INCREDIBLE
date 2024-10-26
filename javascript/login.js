@@ -6,7 +6,7 @@ function validateForm() {
          alert("Please enter both username and password.");
     } else {
         // Redirect to the next page if both fields are filled
-        window.location.href = "index.html";
+        window.location.href = "choice.html";
     }
 }
 
